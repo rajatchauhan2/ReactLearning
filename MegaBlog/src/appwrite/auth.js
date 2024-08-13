@@ -1,13 +1,13 @@
-import { client, Account, ID } from "appwrite";
+import { Client, Account, ID } from "appwrite";
 import conf from "../conf/conf";
 
 export class AuthService {
-  client = new client();
+  client = new Client();
   account;
 
   constructor() {
     this.client
-      .setEndponit(conf.appwriteurl)
+      .setEndpoint(conf.appwriteurl)  // Corrected the typo here
       .setProject(conf.appwriteProjectId);
     this.account = new Account(this.client);
   }
@@ -22,7 +22,7 @@ export class AuthService {
         name
       );
       if (userAccount) {
-        //call another method
+        // Call another method
         return this.login({ email, password });
 
         // return userAccount;
@@ -62,4 +62,4 @@ export class AuthService {
 
 // eslint-disable-next-line no-unused-vars
 const authService = new AuthService();
-export default AuthService;
+export default authService
