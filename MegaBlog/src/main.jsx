@@ -7,9 +7,9 @@ import { Provider } from "react-redux";
 import store from './store/strore.js'
 
 createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <StrictMode>
   <Provider store={store}>
-  {/* <RouterProvider router={router}/> */}
+  <RouterProvider router={router}/>
   </Provider>
-</React.StrictMode>,
+</StrictMode>,
 );
