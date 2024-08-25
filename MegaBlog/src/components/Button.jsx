@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Button({
+export default function Button({
   children,
   bgColor = "bg-blue-500",
   textColor = "text-white",
